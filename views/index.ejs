@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/main.css" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1> HERE ARE YOUR LEADERS </h1>
+
+    <% for (let i=0; i<leaders.length; i++) { %>
+    <li>
+        <a href="/leaders/<%=leaders[i]._id%>">
+            <%= leaders[i].name %>
+        </a>
+        <form action="/leaders/<%=leaders[i]._id%>/edit" method="GET">
+            <button type="submit"> EDIT </button>
+        </form>
+
+        <form action="/leaders/<%=leaders[i]._id%>?_method=DELETE" method="POST">
+            <button type="submit"> DELETE </button>
+        </form>
+    </li>
+    
+    <br>
+
+    <% } %>
+
+    <form action="/leaders/new" method="GET">
+        <button type="submit"> CREATE A NEW LEADER </button>
+    </form>
+
+
+</body>
+</html>

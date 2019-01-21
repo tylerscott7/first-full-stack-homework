@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1> EDIT LEADER </h1>
+    <form action="/leaders/<%=leader._id%>?_method=PUT" method="POST">
+        Name: <input type="text" name="name" value="<%=leader.name%>"> <br>
+        Country: <input type="text" name="country" value="<%=leader.country%>"> <br>
+        Age: <input type="text" name="age" value="<%=leader.age%>"> <br>
+        Gender: <input type="text" name="gender" value="<%=leader.gender%>"> <br>
+        Alive: <input type="checkbox" name="isAlive" 
+        <% if (leader.isAlive == true) { %>
+            checked
+        <% } %>
+        > <br>
+        <button type="submit"> UPDATE THIS LEADER </button>
+    </form>
+
+</body>
+</html>

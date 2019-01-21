@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1> THIS IS YOUR LEADER </h1>
+
+            Name: <%= leader.name %> <br>
+            Country: <%= leader.country %> <br>
+            Age: <%= leader.age %> <br>
+            Gender: <%= leader.gender %> <br>
+            Living: <%= leader.isAlive %> <br> <br>
+
+    <form action="/leaders" method="GET">
+        <button type="submit"> GO BACK TO LEADERS </button>
+    </form>
+
+</body>
+</html>
